@@ -1,0 +1,23 @@
+# Site settings
+title: Jim's blog
+description: Web development, GNU/linux and open source.
+url: "http://blog.jim.nz"
+github_username: tamelion
+
+# Build settings
+markdown: redcarpet
+redcarpet:
+  extensions: ["tables", "no_intra_emphasis", "autolink", "strikethrough", "fenced_code_blocks"]
+
+# Front matter defaults
+defaults:
+  -
+    scope:
+      type: "posts"
+    values:
+      layout: "post"
+  -
+    scope:
+      type: "drafts"
+    values:
+      layout: "post"

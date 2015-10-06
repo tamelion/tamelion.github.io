@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<div class="index">
+
+  <h1 class="page-heading">Latest posts</h1>
+
+  <ul class="post-list">
+    {% for page in site.posts %}
+      <h2><a class="post-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></h2>
+      <li class="{% for tag in post.tags %}{{ tag }} {% endfor %}">
+        <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}</p>
+        {% include tags.html %}
+        <div class="post-excerpt">{{ page.excerpt }}</div>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>
